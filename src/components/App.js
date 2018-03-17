@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import Navigation from "./Navigation";
-import LandingPage from "./Landing";
-import SignUpPage from "./SignUp";
-import SignInPage from "./SignIn";
-import PasswordForgetPage from "./PasswordForget";
-import HomePage from "./Home";
-import AccountPage from "./Account";
+import { Navigation } from "./";
+import { Landing } from "./";
+import { SignUp } from "./";
+import { SignIn } from "./";
+import { PasswordForget } from "./";
+import { Home } from "./";
+import { Account } from "./";
 
 import * as routes from "../constants/routes";
 
@@ -18,16 +18,16 @@ const App = () =>
 
       <hr />
 
-      <Route exact path={routes.LANDING} component={() => <LandingPage />} />
-      <Route exact path={routes.SIGN_UP} component={() => <SignUpPage />} />
-      <Route exact path={routes.SIGN_IN} component={() => <SignInPage />} />
+      <Route exact path={routes.LANDING} component={() => <Landing />} />
+      <Route exact path={routes.SIGN_UP} component={() => <SignUp />} />
+      <Route exact path={routes.SIGN_IN} component={() => <SignIn />} />
       <Route
         exact
         path={routes.PASSWORD_FORGET}
-        component={() => <PasswordForgetPage />}
+        component={() => <PasswordForget />}
       />
-      <Route exact path={routes.HOME} component={() => <HomePage />} />
-      <Route exact path={routes.ACCOUNT} component={() => <AccountPage />} />
+      <Route exact path={routes.HOME} component={() => <Home />} />
+      <Route exact path={routes.ACCOUNT} component={() => <Account />} />
     </div>
   </Router>;
 
