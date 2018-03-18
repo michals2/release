@@ -9,6 +9,8 @@ import { PasswordForget } from "./";
 import { Home } from "./";
 import { Account } from "./";
 
+import { withAuthentication } from "./";
+
 import * as routes from "../constants/routes";
 
 const App = () =>
@@ -31,4 +33,4 @@ const App = () =>
     </div>
   </Router>;
 
-export default App;
+export default withAuthentication(App);
