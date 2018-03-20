@@ -18,6 +18,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "stage": "mv -v ./build/* ./firebase/public"
+    "stage": "rm -rf ./firebase/public/static/* && cp -rf ./build/* ./firebase/public"
   }
 }
