@@ -2,7 +2,7 @@
 import { connect } from "react-redux";
 
 // component imports
-import Navigation from "../../components/Navigation";
+import Navigation from "../../components/Navigation/Navigation";
 
 const mapStateToProps = state => ({
   authUser: state.sessionState.authUser

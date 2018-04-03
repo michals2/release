@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { db } from "../../firebase";
 
 // component imports
-import UserList from "../UserList";
+import { UserList } from "../";
 
 class HomePage extends Component {
   componentDidMount() {

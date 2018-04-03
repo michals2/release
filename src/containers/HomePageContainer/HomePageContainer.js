@@ -2,10 +2,10 @@ import { connect } from "react-redux";
 import { compose } from "recompose";
 
 // component imports
-import HomePage from "../../components/HomePage";
+import HomePage from "../../components/HomePage/HomePage";
 
 // container imports
-import withAuthorization from "../../containers/Session/withAuthorization";
+import withAuthorization from "../Session/withAuthorization";
 
 const mapStateToProps = state => ({
   users: state.userState.users

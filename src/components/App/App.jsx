@@ -1,18 +1,20 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-// import components
-import LandingPage from "../LandingPage";
-import SignUpPage from "../SignUpPage";
-import SignInPage from "../SignInPage";
-import PasswordForgetPage from "../PasswordForgetForm";
-import withAuthentication from "../../containers/Session/withAuthentication";
+// import constants
 import * as routes from "../../constants/routes";
+
+// import components
+import { LandingPage } from "../";
+import { SignUpPage } from "../";
+import { SignInPage } from "../";
+import { PasswordForgetPage } from "../";
 
 // import containers
 import { HomePageContainer } from "../../containers";
 import { AccountPageContainer } from "../../containers";
 import { NavigationContainer } from "../../containers";
+import withAuthentication from "../../containers/Session/withAuthentication";
 
 import "./index.css";
 

@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import { compose } from "recompose";
 
-import AccountPage from "../../components/AccountPage";
+import { AccountPage } from "../../components";
 
 import withAuthorization from "../Session/withAuthorization";
 

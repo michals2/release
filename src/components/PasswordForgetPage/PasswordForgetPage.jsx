@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 
+// import firebase methods
 import { auth } from "../../firebase";
-import * as routes from "../../constants/routes";
 
 const PasswordForgetPage = () =>
   <div>
@@ -68,11 +67,6 @@ class PasswordForgetForm extends Component {
   }
 }
 
-const PasswordForgetLink = () =>
-  <p>
-    <Link to={routes.PASSWORD_FORGET}>Forgot Password?</Link>
-  </p>;
-
 export default PasswordForgetPage;
 
-export { PasswordForgetForm, PasswordForgetLink };
+export { PasswordForgetForm };

@@ -1,10 +1,15 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 
-import { SignUpLink } from "../SignUpPage";
-import { PasswordForgetLink } from "../PasswordForgetForm";
+// import firebase methods
 import { auth } from "../../firebase";
+
+// import constants
 import * as routes from "../../constants/routes";
+
+// import components
+import { SignUpLink } from "../";
+import { PasswordForgetLink } from "../";
 
 const SignInPage = ({ history }) =>
   <div>
