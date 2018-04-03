@@ -1,3 +1,8 @@
+/**
+ * This is a generic container component 
+ * It allows the component that it contains to set a user as authorized
+ */
+
 import React from "react";
 import { connect } from "react-redux";
 
