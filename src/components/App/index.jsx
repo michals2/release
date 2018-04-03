@@ -1,15 +1,18 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
+// import components
 import Navigation from "../Navigation";
 import LandingPage from "../LandingPage";
 import SignUpPage from "../SignUpPage";
 import SignInPage from "../SignInPage";
 import PasswordForgetPage from "../PasswordForgetForm";
-import HomePage from "../HomePage";
-import AccountPage from "../AccountPage";
 import withAuthentication from "../../containers/Session/withAuthentication";
 import * as routes from "../../constants/routes";
+
+// import containers
+import HomePageContainer from "../../containers/HomePageContainer";
+import AccountPageContainer from "../../containers/AccountPageContainer";
 
 import "./index.css";
 
@@ -26,8 +29,12 @@ const App = () =>
         path={routes.PASSWORD_FORGET}
         component={() => <PasswordForgetPage />}
       />
-      <Route exact path={routes.HOME} component={() => <HomePage />} />
-      <Route exact path={routes.ACCOUNT} component={() => <AccountPage />} />
+      <Route exact path={routes.HOME} component={() => <HomePageContainer />} />
+      <Route
+        exact
+        path={routes.ACCOUNT}
+        component={() => <AccountPageContainer />}
+      />
     </div>
   </Router>;
 

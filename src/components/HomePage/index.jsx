@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
-import { compose } from "recompose";
-
-import withAuthorization from "../../containers/Session/withAuthorization";
 import { db } from "../../firebase";
+
+// component imports
+import UserList from "../UserList";
 
 class HomePage extends Component {
   componentDidMount() {
@@ -26,29 +25,4 @@ class HomePage extends Component {
   }
 }
 
-const UserList = ({ users }) =>
-  <div>
-    <h2>List of Usernames of Users</h2>
-    <p>(Saved on Sign Up in Firebase Database)</p>
-
-    {Object.keys(users).map(key =>
-      <div key={key}>
-        {users[key].username}
-      </div>
-    )}
-  </div>;
-
-const mapStateToProps = state => ({
-  users: state.userState.users
-});
-
-const mapDispatchToProps = dispatch => ({
-  onSetUsers: users => dispatch({ type: "USERS_SET", users })
-});
-
-const authCondition = authUser => !!authUser;
-
-export default compose(
-  withAuthorization(authCondition),
-  connect(mapStateToProps, mapDispatchToProps)
-)(HomePage);
+export default HomePage;
