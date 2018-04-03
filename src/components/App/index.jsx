@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 // import components
-import Navigation from "../Navigation";
 import LandingPage from "../LandingPage";
 import SignUpPage from "../SignUpPage";
 import SignInPage from "../SignInPage";
@@ -11,15 +10,16 @@ import withAuthentication from "../../containers/Session/withAuthentication";
 import * as routes from "../../constants/routes";
 
 // import containers
-import HomePageContainer from "../../containers/HomePageContainer";
-import AccountPageContainer from "../../containers/AccountPageContainer";
+import { HomePageContainer } from "../../containers";
+import { AccountPageContainer } from "../../containers";
+import { NavigationContainer } from "../../containers";
 
 import "./index.css";
 
 const App = () =>
   <Router>
     <div className="app">
-      <Navigation />
+      <NavigationContainer />
       <hr />
       <Route exact path={routes.LANDING} component={() => <LandingPage />} />
       <Route exact path={routes.SIGN_UP} component={() => <SignUpPage />} />
